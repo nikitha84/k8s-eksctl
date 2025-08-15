@@ -2,7 +2,7 @@ resource "aws_instance" "web" {
     ami = "ami-0b4f379183e5706b9"
     instance_type = "t3.micro"
     vpc_security_group_ids = [aws_security_group.web.id]
-    subnet_id = 
+    subnet_id = "subnet-0f5f17c2f32b89138"
     user_data = file("docker.sh")
     tags = {
     Name = "helloweb"
